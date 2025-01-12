@@ -14,6 +14,10 @@
   {% include google-adsense.html %}
 {% endif %}
 
+{% if jekyll.environment == 'production' and site.cookiebot_cbid %}
+  {% include cookiebot-consent.html %}
+{% endif %}
+
 {% if page.math %}
   {% include mathjax.html %}
 {% endif %}
