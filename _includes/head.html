@@ -2,6 +2,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+{% if jekyll.environment == 'production' and site.cookiebot_cbid %}
+  {% include cookiebot-consent.html %}
+{% endif %}
+
 {% seo %}
 
 {% feed_meta %}
@@ -12,10 +16,6 @@
 
 {% if jekyll.environment == 'production' and site.google_adsense %}
   {% include google-adsense.html %}
-{% endif %}
-
-{% if jekyll.environment == 'production' and site.cookiebot_cbid %}
-  {% include cookiebot-consent.html %}
 {% endif %}
 
 {% if page.math %}
