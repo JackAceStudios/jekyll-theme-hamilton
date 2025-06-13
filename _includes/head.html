@@ -5,6 +5,9 @@
 {% if jekyll.environment == 'production' and site.cookiebot_cbid %}
   {% include cookiebot-consent.html %}
 {% endif %}
+{% if jekyll.environment == 'production' and site.cookie_script_id %}
+  {% include cookie-script-consent.html %}
+{% endif %}
 
 {% seo %}
 
